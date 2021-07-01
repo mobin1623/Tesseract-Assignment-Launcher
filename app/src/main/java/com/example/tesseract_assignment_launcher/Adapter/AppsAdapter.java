@@ -53,6 +53,10 @@ public class AppsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
             appHolder.imageView.setImageDrawable(list.get(position).getIcon());
             appHolder.textView_appName.setText(list.get(position).getAppName());
+            appHolder.textView_className.setText(list.get(position).getMainActivityClassName());
+            appHolder.textView_versionName.setText(list.get(position).getVersionName());
+            appHolder.textView_versionCode.setText(list.get(position).getVersionCode());
+            appHolder.textView_pkgName.setText(list.get(position).getPackageName());
 
         }
     }
@@ -65,12 +69,17 @@ public class AppsAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     class AppHolder extends RecyclerView.ViewHolder{
 
         ImageView imageView;
-        TextView textView_appName;
+        TextView textView_appName , textView_className,
+                textView_versionCode, textView_versionName, textView_pkgName;
         public AppHolder(@NonNull @org.jetbrains.annotations.NotNull View itemView) {
             super(itemView);
 
             imageView = itemView.findViewById(R.id.imageView);
             textView_appName = itemView.findViewById(R.id.textView_appName);
+            textView_className = itemView.findViewById(R.id.textView_className);
+            textView_versionCode = itemView.findViewById(R.id.textView_versionCode);
+            textView_versionName = itemView.findViewById(R.id.textView_versionName);
+            textView_pkgName = itemView.findViewById(R.id.textView_pkgName);
         }
     }
 }

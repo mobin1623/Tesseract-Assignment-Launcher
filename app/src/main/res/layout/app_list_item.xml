@@ -10,17 +10,52 @@
 
         app:cardUseCompatPadding="true"
         app:cardPreventCornerOverlap="true"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <ImageView
-            android:id="@+id/imageView"
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_launcher_round"/>
+            <LinearLayout
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_launcher_round"/>
-        <TextView
+            android:orientation="vertical">
+            <TextView
+                android:text="App Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView_appName"/>
+                <TextView
+                    android:text="Package Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_pkgName"/>
+                <TextView
+                    android:text="Class Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_className"/>
+                <TextView
+                    android:text="Version Name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_versionName"/>
+                <TextView
+                    android:text="Version Code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView_versionCode"/>
+        </LinearLayout>
+        </LinearLayout>
 
 
     </androidx.cardview.widget.CardView>
